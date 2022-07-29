@@ -1,0 +1,13 @@
+<div class="card {{setBackgroundCard()}}">
+  <div class="bg-pokemon"></div>
+  <div class="pokemon-id">#{{getNumberPokemon()}}</div>
+  <div class="card-title">
+    <h2>{{pokemon.name}}</h2>
+    <div class="pokemon-types">
+      <span *ngFor="let specie of species" class="type">{{specie.name}}</span>
+    </div>
+  </div>
+  <div class="pokemon-image">
+    <img src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif">
+  </div>
+</div>

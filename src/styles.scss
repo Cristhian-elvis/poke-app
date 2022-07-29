@@ -1,1 +1,231 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  :root {
+    --c-p-white: #FFFFFF;
+    --c-p-black: #242424;
+
+    --c-white: #F4F5F6;
+    --c-mono-10: #E3E4E7;
+    --c-mono-30: #9FA3AD;
+    --c-mono-70: #595B5D;
+    --c-mono-100: #313335;
+    --c-black: #2B2B2B;
+
+    --c-brand-d-3: #063560;
+    --c-brand-d-2: #095090;
+    --c-brand-d-1: #0C6AC0;
+
+    --c-brand-1: #1970b7;
+    --c-brand-2: #D84031;
+
+    --c-brand-l-1: #3F9DF3;
+    --c-brand-l-2: #6FB6F6;
+    --c-brand-l-3: #9FCEF9;
+
+    --c-alert-error-l: #df6534;
+    --c-alert-success-l: #2ABB54;
+    --c-alert-info-l: #0075BC;
+    --c-alert-warning-l: #F0B323;
+
+    --c-alert-error-d: #df6534;
+    --c-alert-success-d: #1C7D38;
+    --c-alert-info-d: #0075BC;
+    --c-alert-warning-d: #F0B323;
+  }
+
+  .theme-light {
+    --c-pure-white: var(--c-p-white);
+    --c-pure-black: var(--c-p-black);
+
+    --c-fl-white: var(--c-white);
+    --c-fl-mono-10: var(--c-mono-10);
+    --c-fl-mono-30: var(--c-mono-30);
+    --c-fl-mono-70: var(--c-mono-70);
+    --c-fl-mono-100: var(--c-mono-100);
+    --c-fl-black: var(--c-black);
+
+    --c-fl-brand-d-3: var(--c-brand-d-3);
+    --c-fl-brand-d-2: var(--c-brand-d-2);
+    --c-fl-brand-d-1: var(--c-brand-d-1);
+
+    --c-fl-brand-1: var(--c-brand-1);
+    --c-fl-brand-2: var(--c-brand-2);
+
+    --c-fl-brand-l-1: var(--c-brand-l-1);
+    --c-fl-brand-l-2: var(--c-brand-l-2);
+    --c-fl-brand-l-3: var(--c-brand-l-3);
+
+    --c-fl-alert-error: var(--c-alert-error-d);
+    --c-fl-alert-success: var(--c-alert-success-d);
+    --c-fl-alert-info: var(--c-alert-info-d);
+    --c-fl-alert-warning: var(--c-alert-warning-d);
+  }
+}
+
+@layer utilities {
+  .theme-dark {
+    --c-pure-white: var(--c-p-black);
+    --c-pure-black: var(--c-p-white);
+
+    --c-fl-white: var(--c-black);
+    --c-fl-mono-10: var(--c-mono-100);
+    --c-fl-mono-30: var(--c-mono-70);
+    --c-fl-mono-70: var(--c-mono-30);
+    --c-fl-mono-100: var(--c-mono-10);
+    --c-fl-black: var(--c-white);
+
+    --c-fl-brand-d-3: var(--c-brand-l-3);
+    --c-fl-brand-d-2: var(--c-brand-l-2);
+    --c-fl-brand-d-1: var(--c-brand-l-1);
+
+    --c-fl-brand-1: var(--c-brand-l-1);
+    --c-fl-brand-2: var(--c-brand-2);
+
+    --c-fl-brand-l-1: var(--c-brand-d-1);
+    --c-fl-brand-l-2: var(--c-brand-d-2);
+    --c-fl-brand-l-3: var(--c-brand-d-3);
+
+    --c-fl-alert-error: var(--c-alert-error-l);
+    --c-fl-alert-success: var(--c-alert-success-l);
+    --c-fl-alert-info: var(--c-alert-info-l);
+    --c-fl-alert-warning: var(--c-alert-warning-l);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+.bg-body {
+  background-image: url("assets/img/bg-poke-app.jpg");
+}
+
+/*
+    Pokemon type colors
+*/
+.type-normal { background-color: #C2C2A1; }
+
+.type-flying { background-color: #BAB0D5; }
+
+.type-ghost { background-color: #735797; }
+
+.type-dark { background-color: #333; }
+
+.type-steel { background-color: #CCCCDE; }
+
+.type-ground { background-color: #B1736C; }
+
+.type-poison { background-color: #7C538C; }
+
+.type-grass { background-color: #48D0B0; }
+
+.type-fire { background-color: #FB6C6C; }
+
+.type-electric { background-color: #FFD86F; }
+
+.type-fairy { background-color: #f469a9; }
+
+.type-bug { background-color: #C3CE75; }
+
+.type-fighting { background-color: #d6b591; }
+
+.type-water { background-color: #609FB5; }
+
+.type-psychic { background-color: #9B7FA6; }
+
+.type-ice { background-color: #7FCCEC; }
+
+.type-rock { background-color: #a6aab6; }
+
+.type-dragon { background-color: #F9BE00; }
+
+/*
+    Background Pokeball decoration
+*/
+.bg-pokeball
+{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -10px;
+  bottom: -10px;
+  font-size: 10px;
+  color: rgba( 255,255,255,.2 );
+}
+
+.bg-pokeball::before, .bg-pokeball::after
+{
+  display: block;
+  border-radius: 100%;
+}
+
+.bg-pokeball::before
+{
+  content: '';
+  position: relative;
+  width: 10em;
+  padding-bottom: 10em;
+  border: 4em solid currentColor;
+  clip-path: polygon( 0 0, 0 40%, 50% 40%, 50% 60%, 0 60%, 0 100%, 100% 100%, 100% 60%, 50% 60%, 50% 40%, 100% 40%, 100% 0 );
+}
+
+.bg-pokeball::after
+{
+  content: '';
+  position: absolute;
+  width: 5em;
+  padding-bottom: 5em;
+  background-color: currentColor;
+}
+
+/*
+    Animations
+*/
+@keyframes spin
+{
+  from { transform: rotate( 0 ); }
+  to { transform: rotate( 360deg ); }
+}
+
+@keyframes pull-up-center
+{
+  from { transform: translateY( 50% ) translateX( -50% ); opacity: 0; }
+  to { transform: translateY( 0 ) translateX( -50% ); opacity: 1; }
+}
+
+@keyframes pull-down-center
+{
+  from { transform: translateY( 0 ) translateX( -50% ); opacity: 1; }
+  to { transform: translateY( 50% ) translateX( -50% ); opacity: 0; }
+}
+
+@keyframes pull-up
+{
+  from { transform: translateY( 10% ); opacity: 0; }
+  to { transform: translateY( 0 ); opacity: 1; }
+}
+
+@keyframes fade-in
+{
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out
+{
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fill
+{
+  from { width: 0; }
+}
