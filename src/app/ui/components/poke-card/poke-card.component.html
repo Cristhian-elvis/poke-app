@@ -1,6 +1,6 @@
 <div class="card {{setBackgroundCard()}}">
   <div class="bg-pokemon"></div>
-  <div class="pokemon-id">#{{getNumberPokemon()}}</div>
+  <div class="pokemon-id">#{{id}}</div>
   <div class="card-title">
     <h2>{{pokemon.name}}</h2>
     <div class="pokemon-types">
@@ -8,6 +8,7 @@
     </div>
   </div>
   <div class="pokemon-image">
-    <img src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif">
+    <img *ngIf="mode==='gif'" src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif">
+    <img *ngIf="mode==='img'" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{id}}.png">
   </div>
 </div>

@@ -22,3 +22,20 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  margin: 1rem 0 4rem;
+  color: #444;
+  position: relative;
+  font-weight: bold;
+}
+
+.heading > i {
+  display: inline-block;
+  height: .6em;
+  width: .6em;
+  background-image: url("/assets/img/pokeball.svg");
+  background-repeat: no-repeat;
+}

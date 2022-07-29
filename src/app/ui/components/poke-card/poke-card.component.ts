@@ -10,8 +10,9 @@ export class PokeCardComponent implements OnInit, OnChanges {
 
   //https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png
   @Input() pokemon!: PokemonModel;
-  @HostBinding('style.background-color') background!: string;
-  public species: Species[] = []
+  @Input() mode: 'img' | 'gif' = 'img'
+  public species: Species[] = [];
+  public id: string = '000';
 
   constructor() {
   }
@@ -27,11 +28,12 @@ export class PokeCardComponent implements OnInit, OnChanges {
     if (changes['pokemon'].currentValue) {
       const pokemon: PokemonModel = changes['pokemon'].currentValue;
       this.species = pokemon.types.map((type) => type.type);
+      this.getNumberPokemon()
     }
   }
 
   public getNumberPokemon() {
-    return this.pokemon.id.toString().padStart(3, '000')
+    this.id = this.pokemon.id.toString().padStart(3, '000');
   }
 
 }
