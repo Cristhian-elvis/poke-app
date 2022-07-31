@@ -1,0 +1,6 @@
+<div class="pokedex-view" infiniteScroll [infiniteScrollDistance]="1.5" [infiniteScrollThrottle]="100"
+     (scrolled)="nextResourcePokemon()">
+  <ng-container *ngFor="let pokemon of pokemonPagination">
+    <app-poke-card [pokemon]="pokemon" [mode]="mode"></app-poke-card>
+  </ng-container>
+</div>

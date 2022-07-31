@@ -24,12 +24,13 @@ export class PokemonService {
     return this.http.get<PokemonModel>(this.poke_api + '/pokemon/' + order)
   }
 
-  public getPokemonWithOffsetLimit(offset: string, limit: string) {
+  public getPokemonPagination(offset: string, limit: string) {
     const params = new HttpParams().set('offset', offset).set('limit', limit);
     return this.http.get<ResourceModel>(this.poke_api + '/pokemon', {params: params})
   }
 
   public getPokemonAll() {
-    return this.http.get<ResourceModel>(this.poke_api + '/pokemon')
+    const max = '1154';
+    return this.getPokemonPagination('0', max)
   }
 }

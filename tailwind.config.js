@@ -3,7 +3,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      colors: {
+      /*colors: {
         'white-p': 'var(--c-pure-white)',
         'black-p': 'var(--c-pure-black)',
         white: 'var(--c-fl-white)',
@@ -40,7 +40,7 @@ module.exports = {
           info: 'var(--c-fl-alert-info)',
           warning: 'var(--c-fl-alert-warning)',
         }
-      }
+      }*/
     },
     screens: {
       'sm': '320px',
