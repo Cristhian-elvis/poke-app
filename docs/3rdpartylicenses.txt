@@ -10,6 +10,8 @@ MIT
 @angular/router
 MIT
 
+ngx-infinite-scroll
+
 rxjs
 Apache-2.0
                                Apache License

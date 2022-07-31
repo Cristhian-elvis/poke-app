@@ -1,7 +1,7 @@
-<div class="card {{setBackgroundCard()}}">
-  <div class="bg-pokemon"></div>
+<div class="card relative h-full flex items-center justify-between {{setBackgroundCard()}}">
+  <div class="bg-pokemon absolute flex items-center justify-center"></div>
   <div class="pokemon-id">#{{id}}</div>
-  <div class="card-title">
+  <div class="card-title self-start">
     <h2>{{pokemon.name}}</h2>
     <div class="pokemon-types">
       <span *ngFor="let specie of species" class="type">{{specie.name}}</span>
@@ -9,6 +9,7 @@
   </div>
   <div class="pokemon-image">
     <img *ngIf="mode==='gif'" src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif">
-    <img *ngIf="mode==='img'" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{id}}.png">
+    <!--<img *ngIf="mode==='img'" src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{id}}.png">-->
+    <img *ngIf="mode==='img'" src="{{pokemon?.sprites?.other?.['official-artwork']?.front_default}}">
   </div>
 </div>

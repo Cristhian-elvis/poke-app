@@ -8,21 +8,12 @@
   color: #fff;
   border-radius: 3rem;
   overflow: hidden;
-  height: 100%;
   padding: 3rem 1rem 3rem 3rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   will-change: box-shadow, transform;
   transition: all .3s;
 }
 
 .bg-pokemon {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   right: -10px;
   bottom: -10px;
   font-size: 10px;
@@ -40,7 +31,7 @@
 .bg-pokemon:before {
   content: "";
   position: relative;
-  width: 17em;
+  width: 18em;
   padding-bottom: 10em;
   border: 4em solid;
   -webkit-clip-path: polygon(0 0,0 40%,50% 40%,50% 60%,0 60%,0 100%,100% 100%,100% 60%,50% 60%,50% 40%,100% 40%,100% 0);
@@ -58,10 +49,6 @@
   right: 40px;
   font-size: 2.5rem;
   color: hsla(0, 0%, 100%, .2);
-}
-
-.card-title{
-  align-self: flex-start;
 }
 
 .card-title span.type{
